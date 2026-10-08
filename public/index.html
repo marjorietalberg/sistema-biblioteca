@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Biblioteca Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+</head>
+<body style="background-color: #f8fafc;">
+    <nav class="navbar" style="position: sticky; top: 0; z-index: 100;">
+        <div class="logo-container"><img src="img/logo.jpg" alt="Logo"><h2>Biblioteca Digital</h2></div>
+        
+        <button class="hamburger" id="btnHamburger">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="menuPublico">
+            <a href="login.html" style="font-weight: 500;">Login</a>
+            <a href="cadastro.html" class="btn btn-primary" style="width: auto; padding: 8px 20px; font-size: 12px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; height: 36px; line-height: 1; margin-left: 16px;">Criar Conta</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>O mundo da leitura em suas mãos</h1>
+            <p>Descubra e reserve milhares de títulos incríveis. Uma plataforma profissional e minimalista projetada para facilitar a sua leitura e pesquisas.</p>
+            <div class="btn-group">
+                <a href="cadastro.html" class="btn" style="background: white; color: var(--primary-color); font-weight: 800; border: none; box-shadow: 0 4px 14px rgba(0,0,0,0.2);">Começar agora</a>
+                <a href="#catalogo" class="btn" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); font-weight: 600; backdrop-filter: blur(4px);">Explorar Catálogo</a>
+            </div>
+        </div>
+    </header>
+
+        <!-- Como Funciona -->
+    <section class="section how-it-works-section">
+        
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 class="section-title" style="margin-bottom: 16px;">Como funciona nossa biblioteca?</h2>
+            <p style="font-size: 18px; color: #64748b; max-width: 600px; margin: 0 auto;">Um processo simples e totalmente digital criado para facilitar a sua jornada de estudos e leitura.</p>
+        </div>
+        <div class="steps-grid">
+            
+            <div class="modern-step-card">
+                <div class="step-icon-wrapper">
+                    <div class="step-icon-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="step-icon"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                    </div>
+                    <span class="modern-step-number">01</span>
+                </div>
+                <h3>Escolha online</h3>
+                <p>Navegue pelo nosso catálogo virtual, veja as sinopses, avaliações e encontre o livro perfeito para os seus estudos.</p>
+            </div>
+
+            <div class="modern-step-card">
+                <div class="step-icon-wrapper">
+                    <div class="step-icon-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="step-icon"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path><path d="M10 2v8l3-3 3 3V2"></path></svg>
+                    </div>
+                    <span class="modern-step-number">02</span>
+                </div>
+                <h3>Faça a reserva</h3>
+                <p>Com um clique, você reserva o exemplar no sistema na mesma hora, garantindo que ninguém mais pegue.</p>
+            </div>
+
+            <div class="modern-step-card">
+                <div class="step-icon-wrapper">
+                    <div class="step-icon-bg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="step-icon"><path d="m16 6 4 14"></path><path d="M12 6v14"></path><path d="M8 8v12"></path><path d="M4 4v16"></path></svg>
+                    </div>
+                    <span class="modern-step-number">03</span>
+                </div>
+                <h3>Retire o livro</h3>
+                <p>Vá até o balcão da nossa biblioteca física, apresente seu cadastro para o administrador e boa leitura!</p>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <!-- Split Info Section 1 -->
+    <section class="split-section" style="background-color: #ffffff;">
+        <div class="split-container">
+            <div class="split-content">
+                <span class="split-tag">ACERVO DIGITAL</span>
+                <h2 class="split-heading">Um Acervo Completo e Atualizado</h2>
+                <p class="split-description">Acesse milhares de livros perfeitamente categorizados para os seus estudos, pesquisas acadêmicas e momentos de lazer. Nosso sistema é projetado para te ajudar a encontrar o que você precisa em segundos.</p>
+                <ul class="modern-feature-list">
+                    <li>
+                        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>Acervo diversificado e em constante expansão</span>
+                    </li>
+                    <li>
+                        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>Busca inteligente por título ou autor</span>
+                    </li>
+                    <li>
+                        <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <span>Status de disponibilidade em tempo real</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="split-visual">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop" alt="Estantes modernas de uma biblioteca">
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Info Section 2 -->
+    <section class="split-section" style="background-color: #f8fafc;">
+        <div class="split-container reverse">
+            <div class="split-content">
+                <span class="split-tag">EMPRÉSTIMOS</span>
+                <h2 class="split-heading">Empréstimos Rápidos e Sem Burocracia</h2>
+                <p class="split-description">Chega de filas e papelada. Nosso sistema é totalmente digital e automatizado, permitindo que você faça reservas de onde estiver, pelo computador, tablet ou celular.</p>
+                <div style="margin-top: 32px;">
+                    <a href="cadastro.html" class="btn btn-primary" style="padding: 12px 32px; font-size: 15px; border-radius: 8px;">Criar conta grátis</a>
+                </div>
+            </div>
+            <div class="split-visual">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop" alt="Pessoa acessando a biblioteca pelo computador">
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Catálogo de Livros Redesign -->
+    <section class="section catalog-section" id="catalogo">
+        <div class="catalog-container">
+            <div class="catalog-header">
+                <div class="catalog-title-area">
+                    <h2 class="catalog-heading">Catálogo de Livros</h2>
+                    <span class="catalog-count" id="catalogCount">12 livros encontrados</span>
+                </div>
+                <div class="catalog-search-area">
+                    <div class="search-input-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="inputPesquisaPublica" class="modern-search-box" placeholder="Pesquisar por título, autor ou categoria...">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="catalog-filters">
+                <div class="filter-group">
+                    
+                    <div class="custom-dropdown" id="dropdownCategoria">
+                        <div class="dropdown-header">
+                            <span class="dropdown-selected">Todas as Categorias</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-arrow"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="dropdown-list">
+                            <div class="dropdown-item active" data-value="">Todas as Categorias</div>
+                            <div class="dropdown-item" data-value="Literatura Clássica">Literatura Clássica</div>
+                            <div class="dropdown-item" data-value="Romance">Romance</div>
+                            <div class="dropdown-item" data-value="Ficção Científica">Ficção Científica</div>
+                            <div class="dropdown-item" data-value="Tecnologia">Tecnologia</div>
+                        </div>
+                    </div>
+
+                    <div class="custom-dropdown" id="dropdownDisponibilidade">
+                        <div class="dropdown-header">
+                            <span class="dropdown-selected">Qualquer Disponibilidade</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dropdown-arrow"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="dropdown-list">
+                            <div class="dropdown-item active" data-value="">Qualquer Disponibilidade</div>
+                            <div class="dropdown-item" data-value="disponivel">Apenas Disponíveis</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="modern-book-grid" id="gridLivrosPublica">
+                <!-- Cards gerados dinamicamente via JS -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <strong>Biblioteca Digital</strong>
+                <div style="margin-top: 8px;">Sistema acadêmico profissional para gestão de leitura.</div>
+            </div>
+            <div class="footer-links">
+                <a href="#catalogo">Catálogo</a>
+                <a href="login.html">Login</a>
+                <a href="cadastro.html">Criar Conta</a>
+            </div>
+        </div>
+        <div style="margin-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 32px;">
+            &copy; 2026 Biblioteca Digital. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div id="notificacao"></div>
+    
+    
+    <!-- Modal Detalhes do Livro Redesign -->
+    <div class="modern-modal" id="modalDetalhes">
+        <div class="modern-modal-backdrop" id="fecharModalBackdrop"></div>
+        <div class="modern-modal-content">
+            <div class="modern-modal-header">
+                <h2 id="detalheTitulo">Título do Livro</h2>
+                <button class="modern-modal-close" id="fecharModalDetalhes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <div class="modern-modal-body">
+                <div class="modern-modal-gallery">
+                    <img id="modalImagemPrincipal" src="" alt="Capa do livro">
+                    <div id="modalGaleria" class="modern-modal-thumbnails">
+                        <!-- Miniaturas adicionadas via JS -->
+                    </div>
+                </div>
+                <div class="modern-modal-info">
+                    <div id="detalheCategoria" class="modern-modal-category"></div>
+                    <div id="detalheAutor" class="modern-modal-author"></div>
+                    <div id="detalheEstrelas" class="modern-modal-stars"></div>
+                    
+                    <div class="modern-modal-availability" id="detalheDisponibilidade"></div>
+                    
+                    <div class="modern-modal-description-box">
+                        <h3>Sobre o livro</h3>
+                        <p id="detalheDescricao"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modern-modal-footer">
+                <button type="button" class="btn btn-outline" id="btnCancelarDetalhes">Fechar</button>
+                <button type="button" class="btn btn-primary" id="btnEmprestar">Pegar Emprestado</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnHamburger = document.getElementById('btnHamburger');
+            const navLinks = document.querySelector('.nav-links');
+            if (btnHamburger && navLinks) {
+                btnHamburger.addEventListener('click', () => {
+                    btnHamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                // Close menu when clicking a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        btnHamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+

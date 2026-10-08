@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos - Biblioteca Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Controle de Usuários</h2>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="livros.html">Livros</a>
+            <a href="emprestimos.html" class="active">Empréstimos</a>
+            <a href="#" id="btnSair" class="btn" style="background-color: #ef4444 !important; color: white !important; padding: 6px 16px; border-radius: 6px; font-weight: 700; margin-left: 24px;">SAIR</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="table-header">
+<h2>Controle de Usuários</h2>
+<button class="btn btn-primary" id="btnNovoUsuario" style="width: auto;">+ NOVO USUÁRIO</button>
+</div>
+
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Contato</th>
+                        <th>Nível</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaUsuarios">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Novo Empréstimo -->
+    <div class="modal" id="modalEmprestimo">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Empréstimo</h2>
+                <span class="close" id="fecharModal">&times;</span>
+            </div>
+            <form id="formEmprestimo">
+                <div class="form-group">
+                    <label for="livroSelect">Livro</label>
+                    <select id="livroSelect" class="form-control" required>
+                        <option value="">Selecione um livro...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="usuarioSelect">Usuário</label>
+                    <select id="usuarioSelect" class="form-control" required>
+                        <option value="">Selecione um usuário...</option>
+                    </select>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="btnCancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" style="width: auto;">Emprestar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+<div class="modal" id="modalUsuario">
+    <div class="modal-content" style="max-width: 500px;">
+        <div class="modal-header">
+            <h2 id="modalUsuarioTitle">Novo Usuário</h2>
+            <span class="close" id="fecharModalUsuario">&times;</span>
+        </div>
+        <form id="formUsuario">
+            <input type="hidden" id="usuarioId">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" id="usuarioNome" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" id="usuarioEmail" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Telefone</label>
+                <input type="tel" id="usuarioTelefone" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Senha (deixe em branco para manter a atual)</label>
+                <input type="password" id="usuarioSenha" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Nível de Acesso</label>
+                <select id="usuarioTipo" class="form-control">
+                    <option value="comum">Aluno / Comum</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <select id="usuarioStatus" class="form-control">
+                    <option value="ativo">Ativo</option>
+                    <option value="inativo">Inativo</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline" id="btnCancelarUsuario">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="notificacao"></div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/usuarios.js"></script>
+</body>
+</html>

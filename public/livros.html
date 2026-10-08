@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros - Biblioteca Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container"><img src="img/logo.jpg" alt="Logo"><h2>Biblioteca Digital</h2></div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="livros.html" class="active">Livros</a>
+            <a href="emprestimos.html">Empréstimos</a>
+            <a href="#" id="btnSair" class="btn" style="background-color: #ef4444 !important; color: white !important; padding: 6px 16px; border-radius: 6px; font-weight: 700; margin-left: 24px;">SAIR</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="table-header">
+            <h2>Livros</h2>
+            <div style="display: flex; gap: 16px;">
+                <input type="text" id="inputPesquisa" class="search-box" placeholder="Pesquisar por título ou autor...">
+                <button class="btn btn-primary" id="btnNovoLivro" style="width: auto;">+ Novo livro</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Livro</th>
+                        <th>Autor</th>
+                        <th>Categoria</th>
+                        <th>Quantidade</th>
+                        <th>Disponíveis</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaLivros">
+                    <!-- Linhas geradas dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Novo/Editar Livro -->
+    <div class="modal" id="modalLivro">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Novo Livro</h2>
+                <span class="close" id="fecharModal">&times;</span>
+            </div>
+            <form id="formLivro">
+                <input type="hidden" id="livroId">
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" id="titulo" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="autor">Autor</label>
+                    <input type="text" id="autor" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <input type="text" id="categoria" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade" class="form-control" min="1" required>
+                </div>
+                
+                <div class="form-group" style="text-align: center;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-muted); text-align: left;">Capas do Livro (Até 3 imagens)</label>
+                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <!-- Imagem 1 (Principal) -->
+                        <label for="inputCapa" style="cursor: pointer; display: inline-block;">
+                            <div style="width: 100px; height: 140px; background: #f1f5f9; border: 2px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; border-radius: 8px;">
+                                <img id="previewCapa" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+                                <span id="textCapa" style="color: #64748b; font-size: 11px; font-weight: bold; text-align: center; padding: 5px;">Capa<br>Principal</span>
+                            </div>
+                        </label>
+                        <input type="file" id="inputCapa" accept="image/*" style="display: none;">
+
+                        <!-- Imagem 2 -->
+                        <label for="inputCapa2" style="cursor: pointer; display: inline-block;">
+                            <div style="width: 100px; height: 140px; background: #f1f5f9; border: 2px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; border-radius: 8px;">
+                                <img id="previewCapa2" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+                                <span id="textCapa2" style="color: #64748b; font-size: 11px; font-weight: bold; text-align: center; padding: 5px;">Foto<br>2</span>
+                            </div>
+                        </label>
+                        <input type="file" id="inputCapa2" accept="image/*" style="display: none;">
+
+                        <!-- Imagem 3 -->
+                        <label for="inputCapa3" style="cursor: pointer; display: inline-block;">
+                            <div style="width: 100px; height: 140px; background: #f1f5f9; border: 2px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; border-radius: 8px;">
+                                <img id="previewCapa3" style="width: 100%; height: 100%; object-fit: cover; display: none;">
+                                <span id="textCapa3" style="color: #64748b; font-size: 11px; font-weight: bold; text-align: center; padding: 5px;">Foto<br>3</span>
+                            </div>
+                        </label>
+                        <input type="file" id="inputCapa3" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição / Sinopse</label>
+                    <textarea id="descricao" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="btnCancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" style="width: auto;">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="notificacao"></div>
+    <script src="js/auth.js"></script>
+    <script src="js/livros.js"></script>
+</body>
+</html>

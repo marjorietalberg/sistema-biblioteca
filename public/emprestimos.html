@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos - Biblioteca Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container"><img src="img/logo.jpg" alt="Logo"><h2>Biblioteca Digital</h2></div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="livros.html">Livros</a>
+            <a href="emprestimos.html" class="active">Empréstimos</a>
+            <a href="#" id="btnSair" class="btn" style="background-color: #ef4444 !important; color: white !important; padding: 6px 16px; border-radius: 6px; font-weight: 700; margin-left: 24px;">SAIR</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="table-header">
+            <h2>Empréstimos</h2>
+            <button class="btn btn-primary" id="btnNovoEmprestimo" style="width: auto;">+ Novo empréstimo</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Livro</th>
+                        <th>Usuário</th>
+                        <th>Data Empréstimo</th>
+                        <th>Data Devolução</th>
+                        <th>Status</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaEmprestimos">
+                    <!-- Linhas geradas dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Novo Empréstimo -->
+    <div class="modal" id="modalEmprestimo">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Novo Empréstimo</h2>
+                <span class="close" id="fecharModal">&times;</span>
+            </div>
+            <form id="formEmprestimo">
+                <div class="form-group">
+                    <label for="livroSelect">Livro</label>
+                    <select id="livroSelect" class="form-control" required>
+                        <option value="">Selecione um livro...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="usuarioSelect">Usuário</label>
+                    <select id="usuarioSelect" class="form-control" required>
+                        <option value="">Selecione um usuário...</option>
+                    </select>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="btnCancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" style="width: auto;">Emprestar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="notificacao"></div>
+    <script src="js/auth.js"></script>
+    <script src="js/emprestimos.js"></script>
+</body>
+</html>
